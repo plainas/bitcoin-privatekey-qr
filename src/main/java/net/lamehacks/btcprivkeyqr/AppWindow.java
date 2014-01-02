@@ -8,7 +8,6 @@ import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import net.glxn.qrgen.QRCode;
@@ -16,7 +15,6 @@ import net.glxn.qrgen.QRCode;
 public class AppWindow extends javax.swing.JFrame {
 
     AddessesDialog addessesDialog = new AddessesDialog(this, true);
-    ViewQRCode viewQRCode = new ViewQRCode(this, true);
 
     public AppWindow() {
         initComponents();
