@@ -108,6 +108,8 @@ public class AppWindow extends javax.swing.JFrame {
 
         for (String[] stringskeyAddressPair : keyAddressPairs) {
             try {
+                //TODO: format this stuff with html and a different layout. Check example here:
+                // http://docs.oracle.com/javase/tutorial/uiswing/components/html.html
                 File file = QRCode.from( stringskeyAddressPair[0]).withSize(200, 200).file();
                 BufferedImage bufferedImage = ImageIO.read(file);
                 JPanel singleAddressPanel = new JPanel();
