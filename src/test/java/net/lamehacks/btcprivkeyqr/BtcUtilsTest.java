@@ -1,5 +1,9 @@
 package net.lamehacks.btcprivkeyqr;
 
+import com.google.bitcoin.core.AddressFormatException;
+import com.google.bitcoin.core.Base58;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import junit.framework.TestCase;
 
 public class BtcUtilsTest extends TestCase {
@@ -31,4 +35,12 @@ public class BtcUtilsTest extends TestCase {
         //fail("The test case is a prototype.");
     }
     
+    
+    public void testBase58ToHex(){
+        String b58ProvKeyExample = "5JrjYMTFcUpu6W64FeE2sjUdWhEUUG3WxtJquPkSq43kdAJn2YH";
+        String hexProvKeyExample = BtcUtils.getHexFromb58(b58ProvKeyExample);
+        System.out.println("hex:" + hexProvKeyExample);
+        assertEquals("808940ee2a9ecb23501e191f76d14e4a1f0f9a4bbccdfcfac655d81bb72f0b4b9f50743a72", hexProvKeyExample);
+    }
+   
 }
